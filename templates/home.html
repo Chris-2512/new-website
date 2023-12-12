@@ -2,48 +2,40 @@
 <html>
   <head>
   <title> Chris Ruzario</title> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-    h1 {
-      font-size: 40px;
-      font-family: Roboto;
-      font-weight: normal;
-      color: rgb(100, 100,100);
-     text-aligncenterr;
-    }  
-      #banner
-      {
-        width: 100%; 
+      #banner {
         height: 360px;
-      }
-      h2 {
-        font-family: Roboto;
-        font-size: 32px;
-        color: rgb(100,100,100);
-        text-align: center;
-        font-weight: normal;
-        }
-      .bodytext {
-        font-family: Roboto;
-        color: rgb(80,80,80);
-      }
-      #container {
-        max-width:720px;
-        margin: 0 auto 0 auto;
+        width: 100%;
       }
     </style>
+   
   </head>
   <body>
-    <div id ="Container">
-    <h1>Hello I m Chris</h1> 
-    <img id = "banner" src = "https://new-website--chris25cr7.repl.co/static/banner.jpg" height = "320">
-    <h2>About Chris</h2> 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam elementum pulvinar etiam non quam. Id porta nibh venenatis cras sed felis eget velit. Mattis ullamcorper velit sed ullamcorper morbi. Non nisi est sit amet facilisis magna etiam. Sapien et ligula ullamcorper malesuada proin libero nunc. Tortor consequat id porta nibh venenatis. Justo laoreet sit amet cursus sit amet. Orci eu lobortis elementum nibh tellus molestie. Sit amet commodo nulla facilisi nullam vehicula ipsum a. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Dignissim diam quis enim lobortis scelerisque fermentum dui. Aliquam eleifend mi in nulla posuere sollicitudin aliquam. Blandit libero volutpat sed cras ornare arcu dui. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Orci phasellus egestas tellus rutrum. Metus vulputate eu scelerisque felis imperdiet proin fermentum.</p>
-    <h2> Ideologies</h2>
-    <p class="bodytext">activites</p>
-      <div style="text-align:center;">
-    <button> Contact Me</button>
-        <p> Copyright 2023, Chris</p>
+    <div class ="Container">
+    <h1 class="text-center mt-2 mb-4">Hello I m Chris</h1> 
+    <img class= "img-fluid" id = "banner" src = "https://new-website--chris25cr7.repl.co/static/banner.jpg" height = "320">
+    <h2 class ="text-center  mt-2 mb-4">About Chris</h2> 
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam elementum pulvinar etiam non quam. Id porta nibh venenatis cras sed felis eget velit. Mattis ullamcorper velit sed ullamcorper morbi. Non nisi est sit amet facilisis magna etiam. Sapien et ligula ullamcorper malesuada proin libero nunc. Tortor consequat id porta nibh venenatis. Justo laoreet sit amet cursus sit amet. Orci eu lobortis elementum nibh tellus molestie. Sit amet commodo nulla facilisi nullam vehicula ipsum a. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Dignissim diam quis enim lobortis scelerisque fermentum dui. Aliquam eleifend mi in nulla posuere sollicitudin aliquam. Blandit libero volutpat sed cras ornare arcu dui. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Orci phasellus egestas tellus rutrum. Metus vulputate eu scelerisque felis imperdiet proin fermentum.</p>
+    <h2 class="text-center mt-2 mt-4"> Ideologies</h2>
+    <div>
+      {% for activities in activities %}
+      
+      <div style="margin-bottom:16px;"> <h4 style="color:rgb(120,120,120); margin-bottom:4px;">{{activities['title']}}</h4>
+      <div><b>Location:</b> {{activities['Location']}}
       </div>
+        <div><b>Salary:</b> {{activities['salary']}}
+          </div>
+      </div>
+      {% endfor %}
+    </div>
+    </p>
+     <div class="text-center">
+    <button class="btn btn-primary btn-lg"> Contact Me</button>
+        <p> Copyright 2023, Chris</p>
+    
     </div>
   </body>
 </html>

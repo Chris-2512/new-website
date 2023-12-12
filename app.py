@@ -1,8 +1,36 @@
 from flask import Flask, render_template
 app = Flask(__name__)
+
+ACTIVITIES =[
+    {
+      'id' : 1,
+      'title': 'blockchain',
+      'Location': 'UK',
+      'salary': '1000$'
+    },
+  {
+    'id' : 2,
+    'title': 'banking',
+    'Location': 'Switzerland',
+    'salary': '5000$'
+  },
+  {
+    'id' : 3,
+    'title': 'real estate',
+    'Location': 'Arizona',
+    'salary': '100000$'
+  },
+  {
+    'id' : 4,
+    'title': 'Backend engineer',
+    'Location': 'Ottawa',
+    'salary': '10000$'
+  },
+]
 @app.route("/")
 def hello_world():
-  return render_template('home.html') 
+  return render_template('home.html', 
+        activities=ACTIVITIES) 
 
 if __name__ == "__main__":
   app.run(host ='0.0.0.0', debug=True)
