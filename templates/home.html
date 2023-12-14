@@ -11,7 +11,7 @@
         width: 100%;
       }
     </style>
-   
+
   </head>
   <body>
     <div class ="Container">
@@ -19,23 +19,18 @@
     <img class= "img-fluid" id = "banner" src = "https://new-website--chris25cr7.repl.co/static/banner.jpg" height = "320">
     <h2 class ="text-center  mt-2 mb-4">About Chris</h2> 
     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam elementum pulvinar etiam non quam. Id porta nibh venenatis cras sed felis eget velit. Mattis ullamcorper velit sed ullamcorper morbi. Non nisi est sit amet facilisis magna etiam. Sapien et ligula ullamcorper malesuada proin libero nunc. Tortor consequat id porta nibh venenatis. Justo laoreet sit amet cursus sit amet. Orci eu lobortis elementum nibh tellus molestie. Sit amet commodo nulla facilisi nullam vehicula ipsum a. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Dignissim diam quis enim lobortis scelerisque fermentum dui. Aliquam eleifend mi in nulla posuere sollicitudin aliquam. Blandit libero volutpat sed cras ornare arcu dui. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Orci phasellus egestas tellus rutrum. Metus vulputate eu scelerisque felis imperdiet proin fermentum.</p>
-    <h2 class="text-center mt-2 mt-4"> Ideologies</h2>
+    <h2 class="text-center mt-2 mt-4"> Carrers</h2>
     <div>
-      {% for activities in activities %}
-      
-      <div style="margin-bottom:16px;"> <h4 style="color:rgb(120,120,120); margin-bottom:4px;">{{activities['title']}}</h4>
-      <div><b>Location:</b> {{activities['Location']}}
-      </div>
-        <div><b>Salary:</b> {{activities['salary']}}
-          </div>
-      </div>
+      {% for jobs in jobs %}
+
+     {% include 'jobsitem.html'%}
       {% endfor %}
     </div>
     </p>
      <div class="text-center">
     <button class="btn btn-primary btn-lg"> Contact Me</button>
         <p> Copyright 2023, Chris</p>
-    
+
     </div>
   </body>
 </html>
