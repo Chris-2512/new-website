@@ -9,16 +9,25 @@
       #banner {
         height: 360px;
         width: 100%;
+        margin-bottom:16px;
       }
     </style>
 
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class= "img-fluid" id = "banner" src = "https://new-website--chris25cr7.repl.co/static/banner.jpg" height = "320">
     <div class ="Container">
     <h1 class="text-center mt-2 mb-4">Hello I m Chris</h1> 
-    <img class= "img-fluid" id = "banner" src = "https://new-website--chris25cr7.repl.co/static/banner.jpg" height = "320">
-    <h2 class ="text-center  mt-2 mb-4">About Chris</h2> 
+   
+    <div class = "row" style ="margin-bottom:16px">
+      <div class="col-md-6">
     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam elementum pulvinar etiam non quam. Id porta nibh venenatis cras sed felis eget velit. Mattis ullamcorper velit sed ullamcorper morbi. Non nisi est sit amet facilisis magna etiam. Sapien et ligula ullamcorper malesuada proin libero nunc. Tortor consequat id porta nibh venenatis. Justo laoreet sit amet cursus sit amet. Orci eu lobortis elementum nibh tellus molestie. Sit amet commodo nulla facilisi nullam vehicula ipsum a. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Dignissim diam quis enim lobortis scelerisque fermentum dui. Aliquam eleifend mi in nulla posuere sollicitudin aliquam. Blandit libero volutpat sed cras ornare arcu dui. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Orci phasellus egestas tellus rutrum. Metus vulputate eu scelerisque felis imperdiet proin fermentum.</p>
+    </div>
+       <div class="d-none d-md-block col-md-6">
+         <img src = "/static/chrome.jpg" style="height:320px; border-radius:4px;">
+       </div>
+    </div>
     <h2 class="text-center mt-2 mt-4"> Carrers</h2>
     <div>
       {% for jobs in jobs %}
@@ -32,5 +41,6 @@
         <p> Copyright 2023, Chris</p>
 
     </div>
+      {% include 'footer.html' %}
   </body>
 </html>

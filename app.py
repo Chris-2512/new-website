@@ -35,5 +35,9 @@ def hello_world():
 @app.route("/api/jobs")
 def list_jobs():
   return jsonify(JOBS)
+class LocalData:
+    def __init__(self, username, text):
+        self.username = username
+        self.text = text
 if __name__ == "__main__":
   app.run(host ='0.0.0.0', debug=True)
