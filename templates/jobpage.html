@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<title> {{jobs.title}} - Chris Ruzario </title>
+   {% include 'bootstrap.html' %}
+ </head>
+<body>
+  {% include 'nav.html' %}
+<h3>Title </h3>
+  <p>{{jobs.title}}</p>
+  <h3>Location</h3>
+  <p>{{jobs['Location']}}</p>
+  <h3>Salary</h3>
+  <p>{{jobs['salary']}}</p>
+   {% include 'footer.html' %}
+  
+</body>
+
+
+
+
+
+
+
+  
+</html>
