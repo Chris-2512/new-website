@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request 
 app = Flask(__name__)
 
 JOBS=[
@@ -46,7 +46,14 @@ def new_page():
         jobs=JOBS,
                         my_name='Chris') 
 
-  
+
+
+
+
+@app.route("/jobs/apply" , methods=['post'])
+def apply_to_jobs(id):
+  data = request.form
+  return render_template('application_submitted.html',data=data)
   
 if __name__ == "__main__":
   app.run(host ='0.0.0.0', debug=True)
