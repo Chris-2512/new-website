@@ -4,27 +4,19 @@ app = Flask(__name__)
 JOBS=[
     {
       'id' : 1,
-      'title': 'blockchain',
-      'Location': 'UK',
-      'salary': '1000$'
+      'title': 'Twitter by X'
     },
   {
     'id' : 2,
-    'title': 'banking',
-    'Location': 'Switzerland',
-    'salary': '5000$'
+    'title': 'Instagram'
   },
   {
     'id' : 3,
-    'title': 'real estate',
-    'Location': 'Arizona',
-    'salary': '100000$'
+    'title': 'Facebook'
   },
   {
     'id' : 4,
-    'title': 'Backend engineer',
-    'Location': 'Ottawa',
-    'salary': '10000$'
+    'title': 'Redit / Discord'
   },
 ]
 @app.route("/")
