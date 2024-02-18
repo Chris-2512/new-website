@@ -1,12 +1,7 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyDbRV_S-zMjO0ywnr1-s-VcDhG4VjTAVJw",
-  authDomain: "hsd-web.firebaseapp.com",
-  databaseURL: "https://hsd-web-default-rtdb.firebaseio.com",
-  projectId: "hsd-web",
-  storageBucket: "hsd-web.appspot.com",
-  messagingSenderId: "295910268761",
-  appId: "1:295910268761:web:c737a14fcfcfa7bf3c7648"
-};
+  // firebase key from secret
+  
+};     
 
 // Initialize firebase
 firebase.initializeApp(firebaseConfig);
